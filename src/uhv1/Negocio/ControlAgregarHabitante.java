@@ -1,5 +1,5 @@
-
 package uhv1.Negocio;
+
 import java.sql.SQLException;
 import javax.swing.JFrame;
 import uhv1.ControlPrincipal;
@@ -9,7 +9,7 @@ import uhv1.Vistas.DialogoSeleccionCasa;
 import uhv1.Vistas.VentanaAltaHabitante;
 
 public class ControlAgregarHabitante {
-    
+
     private final DAOHabitantes daohabitante;
     private final DAOCasa casa;
 
@@ -41,21 +41,22 @@ public class ControlAgregarHabitante {
 
     }
 
-    public void agregarHabitante(String nombre, String aPaterno, String aMaterno, float saldo,  Casa casa,float telefono) throws SQLException {
+    public void agregarHabitante(String nombre, String aPaterno, String aMaterno, float saldo, Casa casa, float telefono) throws SQLException {
 
-        Responsable habitante = new Responsable(0, nombre, aPaterno, aMaterno, telefono,casa,saldo);
+        Responsable habitante = new Responsable(0, nombre, aPaterno, aMaterno, telefono, casa, saldo);
         daohabitante.registraHabitante(habitante);
 
     }
-    
-      public void regresaVentanaPrincipal(){
-      
-         ControlPrincipal registro = new ControlPrincipal();
+
+    public void regresaVentanaPrincipal() {
+
+        ControlPrincipal registro = new ControlPrincipal();
         registro.inicia();
     }
-    public void botonCancelar(){
-         ControlPrincipal cancelo = new ControlPrincipal();
+
+    public void botonCancelar() {
+        ControlPrincipal cancelo = new ControlPrincipal();
         cancelo.inicia();
     }
-    
+
 }

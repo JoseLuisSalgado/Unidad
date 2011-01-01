@@ -23,4 +23,6 @@ public class ControlVentanaEvento {
         VE.setVisible(true);
     }
     
+    
+    
 }
