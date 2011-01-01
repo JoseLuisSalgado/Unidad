@@ -2,6 +2,7 @@
 package uhv1.Negocio;
 import java.sql.SQLException;
 import javax.swing.JFrame;
+import uhv1.ControlPrincipal;
 import uhv1.Persistencia.DAOCasa;
 import uhv1.Persistencia.DAOHabitantes;
 import uhv1.Vistas.DialogoSeleccionCasa;
@@ -47,12 +48,13 @@ public class ControlAgregarHabitante {
 
     }
     
-     public void regresaVentanaHabitante(){
-        ControlVentanaHabitante registro = new ControlVentanaHabitante();
+      public void regresaVentanaPrincipal(){
+      
+         ControlPrincipal registro = new ControlPrincipal();
         registro.inicia();
     }
     public void botonCancelar(){
-         ControlVentanaHabitante cancelo = new ControlVentanaHabitante();
+         ControlPrincipal cancelo = new ControlPrincipal();
         cancelo.inicia();
     }
     

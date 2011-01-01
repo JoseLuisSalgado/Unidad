@@ -208,7 +208,7 @@ public class VentanaAltaHabitante extends javax.swing.JFrame {
                   Logger.getLogger(VentanaAltaHabitante.class.getName()).log(Level.SEVERE, null, ex);
               }
               JOptionPane.showMessageDialog(null, "Se ha agregado el habitante");
-              controlHab.regresaVentanaHabitante();
+              controlHab.regresaVentanaPrincipal();
 
           }
 
