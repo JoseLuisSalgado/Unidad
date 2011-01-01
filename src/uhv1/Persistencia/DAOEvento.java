@@ -51,7 +51,7 @@ public class DAOEvento {
             rs2.next();
             /* Se crean los objetos casa y responsable con los datos del evento solicitado*/
 
-            Casa casa = new Casa(rs2.getInt("idCasa"), rs2.getString("seccion"), rs2.getInt("numero"));
+           Casa casa = new Casa(rs2.getInt("idCasa"), rs2.getString("seccion"), rs2.getInt("numero"));
             Responsable habitante = new Responsable(rs2.getInt("idHabitante"), rs2.getString("nombre"), rs2.getString("aPat"), rs2.getString("aMat"), rs2.getFloat("telefono"), casa, rs2.getFloat("saldo"));
             Evento evento = new Evento(id, nomE, fechaR, descripcion, saldo, habitante);
 

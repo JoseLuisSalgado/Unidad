@@ -3,6 +3,8 @@ package uhv1.Negocio;
 
 import uhv1.Persistencia.DAOEvento;
 import uhv1.Vistas.VentanaBuscaEvento;
+import uhv1.Vistas.VentanaNoEncontrado;
+import uhv1.Vistas.VentanaNotFoundEvento;
 
 /**
  *
@@ -33,8 +35,8 @@ public class ControlBuscaEvento {
         if (even == null) {
             /*Si no se encontro el evento buscado, se envia mensaje a la ventana no encontrado, para
              desplegar una alerta */
-            // VentanaNoEncontrado vent = new VentanaNoEncontrado(this);
-            //vent.setVisible(true);
+            VentanaNotFoundEvento ventne = new VentanaNotFoundEvento(this);
+            ventne.setVisible(true);
         } else {
             System.out.println(even.getNombre() + even.getDescripcion() + even.getFechaReservacion());
             /* Se encontro el evento, y se crea una instancia de control gestion

@@ -18,11 +18,14 @@ public class ControlVentanaEvento {
         this.daohabitante = daohabitante;
     }
     public void inicia(){
-        ControlBuscaEvento busca_evento = new ControlBuscaEvento(daoeventos);
-        VentanaEventos VE = new VentanaEventos(busca_evento);
+       
+        VentanaEventos VE = new VentanaEventos(this);
         VE.setVisible(true);
     }
     
-    
+    public void controlBusca(){
+        ControlBuscaEvento busca_evento = new ControlBuscaEvento(daoeventos);
+        busca_evento.inicia();
+    }
     
 }

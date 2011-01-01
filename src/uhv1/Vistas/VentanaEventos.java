@@ -18,16 +18,13 @@ public class VentanaEventos extends javax.swing.JFrame {
      * Creates new form VentanaEventos
      */
     ControlVentanaEvento ctrlVentanaEventos = new ControlVentanaEvento();
-    ControlBuscaEvento busca_evento;
     
-    public VentanaEventos(ControlBuscaEvento busca_evento) {
-        this.busca_evento = busca_evento;
+    
+    public VentanaEventos(ControlVentanaEvento ctrlVentanaEventos) {
+        this.ctrlVentanaEventos = ctrlVentanaEventos;
         initComponents();
     }
-    public VentanaEventos(){
-        
-    }
-
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -39,7 +36,7 @@ public class VentanaEventos extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        jBuscar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -53,10 +50,10 @@ public class VentanaEventos extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setText("Buscar");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        jBuscar.setText("Buscar");
+        jBuscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                jBuscarActionPerformed(evt);
             }
         });
 
@@ -72,7 +69,7 @@ public class VentanaEventos extends javax.swing.JFrame {
                 .addGap(73, 73, 73)
                 .addComponent(jButton1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 109, Short.MAX_VALUE)
-                .addComponent(jButton2)
+                .addComponent(jBuscar)
                 .addGap(102, 102, 102))
         );
         layout.setVerticalGroup(
@@ -83,7 +80,7 @@ public class VentanaEventos extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
-                    .addComponent(jButton2))
+                    .addComponent(jBuscar))
                 .addGap(72, 72, 72))
         );
 
@@ -94,10 +91,10 @@ public class VentanaEventos extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void jBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBuscarActionPerformed
         dispose();       
-        busca_evento.inicia();
-    }//GEN-LAST:event_jButton2ActionPerformed
+        ctrlVentanaEventos.controlBusca();
+    }//GEN-LAST:event_jBuscarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -105,8 +102,8 @@ public class VentanaEventos extends javax.swing.JFrame {
    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jBuscar;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

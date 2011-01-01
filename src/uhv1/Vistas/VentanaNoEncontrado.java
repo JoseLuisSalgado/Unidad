@@ -36,7 +36,7 @@ public class VentanaNoEncontrado extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("NO SE ENCONTRO EL HABITANTE");
+        jLabel1.setText("NO SE ENCONTRO El HABITANTE");
 
         botonAceptar.setText("Aceptar");
         botonAceptar.addActionListener(new java.awt.event.ActionListener() {
@@ -57,7 +57,7 @@ public class VentanaNoEncontrado extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(157, 157, 157)
                         .addComponent(botonAceptar)))
-                .addContainerGap(130, Short.MAX_VALUE))
+                .addContainerGap(133, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
