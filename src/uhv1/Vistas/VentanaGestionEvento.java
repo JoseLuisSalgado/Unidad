@@ -3,10 +3,6 @@ import uhv1.Negocio.Evento;
 import uhv1.Negocio.ControlGestionEvento;
 
 
-/**
- *
- * @author Vianey
- */
 public class VentanaGestionEvento extends javax.swing.JFrame {
 
     /**
