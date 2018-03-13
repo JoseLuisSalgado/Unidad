@@ -9,12 +9,12 @@ package uhv1.Vistas;
  *
  * @author evil5
  */
-public class VentanaAltaTajeton extends javax.swing.JPanel {
+public class VentanaAltaTarjeton extends javax.swing.JPanel {
 
     /**
      * Creates new form VentanaAltaTajeton
      */
-    public VentanaAltaTajeton() {
+    public VentanaAltaTarjeton() {
         initComponents();
     }
 
