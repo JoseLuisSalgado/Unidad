@@ -5,7 +5,7 @@
  */
 package uhv1;
 
-import uhv1.Negocio.ControlVentanaEventos;
+import uhv1.Negocio.ControlVentanaEvento;
 import uhv1.Negocio.ControlVentanaHabitante;
 import uhv1.Negocio.ControlVentanaTarjeton;
 import uhv1.Vistas.VentanaPrincipal;
@@ -38,7 +38,7 @@ public class ControlPrincipal {
     }
     
     public void controlEventos(){
-        ControlVentanaEventos CVE = new ControlVentanaEventos();
+        ControlVentanaEvento CVE = new ControlVentanaEvento();
         CVE.inicia();
     }
     

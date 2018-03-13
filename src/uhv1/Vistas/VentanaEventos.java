@@ -6,7 +6,7 @@
 package uhv1.Vistas;
 
 import uhv1.Negocio.ControlBuscaEvento;
-import uhv1.Negocio.ControlVentanaEventos;
+import uhv1.Negocio.ControlVentanaEvento;
 
 /**
  *
@@ -17,7 +17,7 @@ public class VentanaEventos extends javax.swing.JFrame {
     /**
      * Creates new form VentanaEventos
      */
-    ControlVentanaEventos ctrlVentanaEventos = new ControlVentanaEventos();
+    ControlVentanaEvento ctrlVentanaEventos = new ControlVentanaEvento();
     ControlBuscaEvento busca_evento;
     
     public VentanaEventos(ControlBuscaEvento busca_evento) {
