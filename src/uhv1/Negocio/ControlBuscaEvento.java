@@ -1,6 +1,7 @@
 
 package uhv1.Negocio;
 
+import uhv1.Persistencia.DAOEvento;
 import uhv1.Vistas.VentanaBuscaEvento;
 
 /**
