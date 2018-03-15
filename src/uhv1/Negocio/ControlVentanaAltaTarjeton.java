@@ -6,15 +6,9 @@ import uhv1.Vistas.VentanaAltaTarjeton;
 
 public class ControlVentanaAltaTarjeton {
 
-    public ControlVentanaAltaTarjeton(){
+    public ControlVentanaAltaTarjeton(Responsable hab){
         java.awt.EventQueue.invokeLater(() -> {
-                new VentanaAltaTarjeton().setVisible(true);
-            
+            new VentanaAltaTarjeton(hab).setVisible(true);
         });
-    }
-    
-    public static void main(String[] args) {
-        ControlVentanaAltaTarjeton cvat = new ControlVentanaAltaTarjeton();
-
     }
 }

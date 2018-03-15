@@ -5,18 +5,19 @@
  */
 package uhv1.Vistas;
 
-import java.util.Locale;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import javax.swing.JOptionPane;
+import uhv1.Negocio.Responsable;
 
-/**
- *
- * @author evil5
- */
 public class VentanaAltaTarjeton extends javax.swing.JFrame {
-
-    /**
-     * Creates new form VentanaAltaTarjeton
-     */
-    public VentanaAltaTarjeton() {
+    Date fechaHoy = new Date();
+    DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
+    Responsable hab;
+    
+    public VentanaAltaTarjeton(Responsable hab) {
+        this.hab = hab;
         initComponents();
         setLocationRelativeTo(this);
     }
@@ -64,7 +65,7 @@ public class VentanaAltaTarjeton extends javax.swing.JFrame {
         campo_estado = new javax.swing.JTextField();
         jLabel17 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
+        boton_cancelar = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -86,17 +87,34 @@ public class VentanaAltaTarjeton extends javax.swing.JFrame {
 
         jLabel6.setText("Saldo:");
 
+        campo_idHabitante.setText(Integer.toString(hab.getId())
+        );
+
+        campo_nombre.setText(hab.getNombre());
+        campo_nombre.setEnabled(false);
+        campo_nombre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                campo_nombreActionPerformed(evt);
+            }
+        });
+
+        campo_aPat.setText(hab.getaPat());
         campo_aPat.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 campo_aPatActionPerformed(evt);
             }
         });
 
+        campo_aMat.setText(hab.getaMat());
+
+        campo_telefono.setText(Float.toString(hab.getTelefono()));
         campo_telefono.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 campo_telefonoActionPerformed(evt);
             }
         });
+
+        campo_saldo.setText(Float.toString(hab.getSaldo()));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -267,7 +285,12 @@ public class VentanaAltaTarjeton extends javax.swing.JFrame {
 
         jLabel14.setText("Datos del habitante");
 
-        jButton2.setText("Calcelar");
+        boton_cancelar.setText("Calcelar");
+        boton_cancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boton_cancelarActionPerformed(evt);
+            }
+        });
 
         jButton1.setText("Aceptar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -301,7 +324,7 @@ public class VentanaAltaTarjeton extends javax.swing.JFrame {
                                 .addComponent(jLabel16)
                                 .addGap(215, 215, 215))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(jButton2)
+                                .addComponent(boton_cancelar)
                                 .addGap(59, 59, 59)
                                 .addComponent(jButton1)
                                 .addGap(35, 35, 35))))))
@@ -329,7 +352,7 @@ public class VentanaAltaTarjeton extends javax.swing.JFrame {
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2)
+                    .addComponent(boton_cancelar)
                     .addComponent(jButton1))
                 .addGap(0, 11, Short.MAX_VALUE))
         );
@@ -349,42 +372,22 @@ public class VentanaAltaTarjeton extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_campo_telefonoActionPerformed
 
+    private void campo_nombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campo_nombreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campo_nombreActionPerformed
+
+    private void boton_cancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton_cancelarActionPerformed
+        JOptionPane.showMessageDialog(null, "Se canceló el registro de Alta de tarjetón. \nNo se realizaron cambios en el habitante.", "Aviso:", JOptionPane.WARNING_MESSAGE);
+        dispose();
+    }//GEN-LAST:event_boton_cancelarActionPerformed
+
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(VentanaAltaTarjeton.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(VentanaAltaTarjeton.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(VentanaAltaTarjeton.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(VentanaAltaTarjeton.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new VentanaAltaTarjeton().setVisible(true);
-            }
-        });
-    }
+   
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton boton_cancelar;
     private javax.swing.JTextField campo_aMat;
     private javax.swing.JTextField campo_aPat;
     private javax.swing.JTextField campo_estado;
@@ -400,7 +403,6 @@ public class VentanaAltaTarjeton extends javax.swing.JFrame {
     private javax.swing.JTextField campo_seccion;
     private javax.swing.JTextField campo_telefono;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
