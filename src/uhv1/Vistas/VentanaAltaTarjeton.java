@@ -6,27 +6,25 @@
 package uhv1.Vistas;
 
 import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Locale;
 import javax.swing.JOptionPane;
 import uhv1.Negocio.Responsable;
 
 public class VentanaAltaTarjeton extends javax.swing.JFrame {
     Date fechaHoy = new Date();
-    DateFormat hoy = new SimpleDateFormat("dd/MM/yyyy");
-    DateFormat vencimiento = new SimpleDateFormat("dd/MM/yyyy");
+    SimpleDateFormat df = new SimpleDateFormat("dd/MM/yyyy");
     Responsable hab;
     Date fechaVencimiento = new Date();
     
-    
-    public VentanaAltaTarjeton(Responsable hab) {
+    public VentanaAltaTarjeton(Responsable hab) throws ParseException {
         Calendar cal = Calendar.getInstance();
         cal.setTime(fechaHoy);
         cal.add(Calendar.MONTH, 1);
         fechaVencimiento = new Date(cal.getTimeInMillis());
-        hoy.format(fechaHoy);
-        vencimiento.format(fechaVencimiento);
         this.hab = hab;
         initComponents();
         setLocationRelativeTo(this);
@@ -285,12 +283,13 @@ public class VentanaAltaTarjeton extends javax.swing.JFrame {
         campo_idNumEstacionamiento.setEnabled(false);
 
         campo_fechaImpresion.setEditable(false);
-        campo_fechaImpresion.setText(hoy.toString());
+        campo_fechaImpresion.setText(df.format(fechaHoy));
         campo_fechaImpresion.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         campo_fechaImpresion.setEnabled(false);
 
         campo_fechaVencimiento.setEditable(false);
-        campo_fechaVencimiento.setText(vencimiento.toString());
+        campo_fechaVencimiento.setText(df.format(fechaVencimiento)
+        );
         campo_fechaVencimiento.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         campo_fechaVencimiento.setEnabled(false);
 
@@ -404,9 +403,9 @@ public class VentanaAltaTarjeton extends javax.swing.JFrame {
                                 .addGap(215, 215, 215))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addComponent(boton_cancelar)
-                                .addGap(59, 59, 59)
+                                .addGap(77, 77, 77)
                                 .addComponent(jButton1)
-                                .addGap(35, 35, 35))))))
+                                .addGap(44, 44, 44))))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
