@@ -1,4 +1,3 @@
-
 package uhv1.Persistencia;
 
 import java.sql.Date;
@@ -14,16 +13,16 @@ import uhv1.Negocio.Responsable;
  * @author darky
  */
 public class DAOEvento {
-    
+
     public Evento buscaEvento(String nombreEvento) {
-        
+
         String nomE;
         Date fechaR;
         String descripcion;
         int hab;
         float saldo;
         int id;
-        
+
         try {
             Statement statement = ManejadorBD.dameConnection().createStatement();
             ResultSet rs = statement.executeQuery("SELECT * FROM Eventos WHERE nombre = '" + nombreEvento + "';");
@@ -51,7 +50,7 @@ public class DAOEvento {
             rs2.next();
             /* Se crean los objetos casa y responsable con los datos del evento solicitado*/
 
-           Casa casa = new Casa(rs2.getInt("idCasa"), rs2.getString("seccion"), rs2.getInt("numero"));
+            Casa casa = new Casa(rs2.getInt("idCasa"), rs2.getString("seccion"), rs2.getInt("numero"));
             Responsable habitante = new Responsable(rs2.getInt("idHabitante"), rs2.getString("nombre"), rs2.getString("aPat"), rs2.getString("aMat"), rs2.getFloat("telefono"), casa, rs2.getFloat("saldo"));
             Evento evento = new Evento(id, nomE, fechaR, descripcion, saldo, habitante);
 
