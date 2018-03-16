@@ -7,6 +7,7 @@ package uhv1.Vistas;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 import javax.swing.JOptionPane;
 import uhv1.Negocio.Responsable;
@@ -15,8 +16,14 @@ public class VentanaAltaTarjeton extends javax.swing.JFrame {
     Date fechaHoy = new Date();
     DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
     Responsable hab;
+    Date fechaVencimiento = new Date();
+    
     
     public VentanaAltaTarjeton(Responsable hab) {
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(fechaHoy);
+        cal.add(Calendar.MONTH, 1);
+        fechaVencimiento = new Date(cal.getTimeInMillis());
         this.hab = hab;
         initComponents();
         setLocationRelativeTo(this);
@@ -89,8 +96,11 @@ public class VentanaAltaTarjeton extends javax.swing.JFrame {
 
         campo_idHabitante.setText(Integer.toString(hab.getId())
         );
+        campo_idHabitante.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        campo_idHabitante.setEnabled(false);
 
         campo_nombre.setText(hab.getNombre());
+        campo_nombre.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         campo_nombre.setEnabled(false);
         campo_nombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -99,6 +109,8 @@ public class VentanaAltaTarjeton extends javax.swing.JFrame {
         });
 
         campo_aPat.setText(hab.getaPat());
+        campo_aPat.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        campo_aPat.setEnabled(false);
         campo_aPat.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 campo_aPatActionPerformed(evt);
@@ -106,8 +118,12 @@ public class VentanaAltaTarjeton extends javax.swing.JFrame {
         });
 
         campo_aMat.setText(hab.getaMat());
+        campo_aMat.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        campo_aMat.setEnabled(false);
 
         campo_telefono.setText(Float.toString(hab.getTelefono()));
+        campo_telefono.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        campo_telefono.setEnabled(false);
         campo_telefono.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 campo_telefonoActionPerformed(evt);
@@ -115,6 +131,8 @@ public class VentanaAltaTarjeton extends javax.swing.JFrame {
         });
 
         campo_saldo.setText(Float.toString(hab.getSaldo()));
+        campo_saldo.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        campo_saldo.setEnabled(false);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -174,6 +192,23 @@ public class VentanaAltaTarjeton extends javax.swing.JFrame {
 
         jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
+        campo_idCasa.setText(Integer.toString(hab.getCasa().getId()));
+        campo_idCasa.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        campo_idCasa.setEnabled(false);
+        campo_idCasa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                campo_idCasaActionPerformed(evt);
+            }
+        });
+
+        campo_seccion.setText(hab.getCasa().getSeccion());
+        campo_seccion.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        campo_seccion.setEnabled(false);
+
+        campo_numero.setText(Integer.toString(hab.getCasa().getNumero()));
+        campo_numero.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        campo_numero.setEnabled(false);
+
         jLabel13.setText("Número:");
 
         jLabel12.setText("Sección:");
@@ -231,7 +266,24 @@ public class VentanaAltaTarjeton extends javax.swing.JFrame {
 
         jLabel10.setText("Fecha de vencimiento:");
 
+        campo_idNumEstacionamiento.setText("Nuevo");
+        campo_idNumEstacionamiento.setToolTipText("");
+        campo_idNumEstacionamiento.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        campo_idNumEstacionamiento.setEnabled(false);
+
+        campo_fechaImpresion.setText(fechaHoy.toString());
+        campo_fechaImpresion.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        campo_fechaImpresion.setEnabled(false);
+
+        campo_fechaVencimiento.setText(fechaVencimiento.toString());
+        campo_fechaVencimiento.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        campo_fechaVencimiento.setEnabled(false);
+
         jLabel15.setText("Estado:");
+
+        campo_estado.setText("Activo");
+        campo_estado.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        campo_estado.setEnabled(false);
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -380,6 +432,10 @@ public class VentanaAltaTarjeton extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(null, "Se canceló el registro de Alta de tarjetón. \nNo se realizaron cambios en el habitante.", "Aviso:", JOptionPane.WARNING_MESSAGE);
         dispose();
     }//GEN-LAST:event_boton_cancelarActionPerformed
+
+    private void campo_idCasaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campo_idCasaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campo_idCasaActionPerformed
 
     /**
      * @param args the command line arguments
