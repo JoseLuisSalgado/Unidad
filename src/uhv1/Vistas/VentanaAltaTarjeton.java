@@ -14,7 +14,8 @@ import uhv1.Negocio.Responsable;
 
 public class VentanaAltaTarjeton extends javax.swing.JFrame {
     Date fechaHoy = new Date();
-    DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
+    DateFormat hoy = new SimpleDateFormat("dd/MM/yyyy");
+    DateFormat vencimiento = new SimpleDateFormat("dd/MM/yyyy");
     Responsable hab;
     Date fechaVencimiento = new Date();
     
@@ -24,6 +25,8 @@ public class VentanaAltaTarjeton extends javax.swing.JFrame {
         cal.setTime(fechaHoy);
         cal.add(Calendar.MONTH, 1);
         fechaVencimiento = new Date(cal.getTimeInMillis());
+        hoy.format(fechaHoy);
+        vencimiento.format(fechaVencimiento);
         this.hab = hab;
         initComponents();
         setLocationRelativeTo(this);
@@ -94,11 +97,13 @@ public class VentanaAltaTarjeton extends javax.swing.JFrame {
 
         jLabel6.setText("Saldo:");
 
+        campo_idHabitante.setEditable(false);
         campo_idHabitante.setText(Integer.toString(hab.getId())
         );
         campo_idHabitante.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         campo_idHabitante.setEnabled(false);
 
+        campo_nombre.setEditable(false);
         campo_nombre.setText(hab.getNombre());
         campo_nombre.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         campo_nombre.setEnabled(false);
@@ -108,6 +113,7 @@ public class VentanaAltaTarjeton extends javax.swing.JFrame {
             }
         });
 
+        campo_aPat.setEditable(false);
         campo_aPat.setText(hab.getaPat());
         campo_aPat.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         campo_aPat.setEnabled(false);
@@ -117,10 +123,12 @@ public class VentanaAltaTarjeton extends javax.swing.JFrame {
             }
         });
 
+        campo_aMat.setEditable(false);
         campo_aMat.setText(hab.getaMat());
         campo_aMat.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         campo_aMat.setEnabled(false);
 
+        campo_telefono.setEditable(false);
         campo_telefono.setText(Float.toString(hab.getTelefono()));
         campo_telefono.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         campo_telefono.setEnabled(false);
@@ -130,6 +138,7 @@ public class VentanaAltaTarjeton extends javax.swing.JFrame {
             }
         });
 
+        campo_saldo.setEditable(false);
         campo_saldo.setText(Float.toString(hab.getSaldo()));
         campo_saldo.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         campo_saldo.setEnabled(false);
@@ -192,6 +201,7 @@ public class VentanaAltaTarjeton extends javax.swing.JFrame {
 
         jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
+        campo_idCasa.setEditable(false);
         campo_idCasa.setText(Integer.toString(hab.getCasa().getId()));
         campo_idCasa.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         campo_idCasa.setEnabled(false);
@@ -201,10 +211,12 @@ public class VentanaAltaTarjeton extends javax.swing.JFrame {
             }
         });
 
+        campo_seccion.setEditable(false);
         campo_seccion.setText(hab.getCasa().getSeccion());
         campo_seccion.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         campo_seccion.setEnabled(false);
 
+        campo_numero.setEditable(false);
         campo_numero.setText(Integer.toString(hab.getCasa().getNumero()));
         campo_numero.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         campo_numero.setEnabled(false);
@@ -266,21 +278,25 @@ public class VentanaAltaTarjeton extends javax.swing.JFrame {
 
         jLabel10.setText("Fecha de vencimiento:");
 
+        campo_idNumEstacionamiento.setEditable(false);
         campo_idNumEstacionamiento.setText("Nuevo");
         campo_idNumEstacionamiento.setToolTipText("");
         campo_idNumEstacionamiento.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         campo_idNumEstacionamiento.setEnabled(false);
 
-        campo_fechaImpresion.setText(fechaHoy.toString());
+        campo_fechaImpresion.setEditable(false);
+        campo_fechaImpresion.setText(hoy.toString());
         campo_fechaImpresion.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         campo_fechaImpresion.setEnabled(false);
 
-        campo_fechaVencimiento.setText(fechaVencimiento.toString());
+        campo_fechaVencimiento.setEditable(false);
+        campo_fechaVencimiento.setText(vencimiento.toString());
         campo_fechaVencimiento.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         campo_fechaVencimiento.setEnabled(false);
 
         jLabel15.setText("Estado:");
 
+        campo_estado.setEditable(false);
         campo_estado.setText("Activo");
         campo_estado.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         campo_estado.setEnabled(false);
@@ -292,23 +308,28 @@ public class VentanaAltaTarjeton extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(27, 27, 27)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel7)
-                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(jLabel15)
-                        .addComponent(jLabel9)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(campo_fechaImpresion, javax.swing.GroupLayout.DEFAULT_SIZE, 116, Short.MAX_VALUE)
-                    .addComponent(campo_idNumEstacionamiento)
-                    .addComponent(campo_estado))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel8)
-                    .addComponent(jLabel10))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(campo_placas, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
-                    .addComponent(campo_fechaVencimiento))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel15)
+                            .addComponent(jLabel9))
+                        .addGap(33, 33, 33)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(campo_estado, javax.swing.GroupLayout.DEFAULT_SIZE, 116, Short.MAX_VALUE)
+                            .addComponent(campo_fechaImpresion)))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(jLabel7)
+                        .addGap(18, 18, 18)
+                        .addComponent(campo_idNumEstacionamiento, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel10, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addGap(21, 21, 21)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(campo_fechaVencimiento, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(campo_placas, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
         jPanel3Layout.setVerticalGroup(
@@ -318,19 +339,25 @@ public class VentanaAltaTarjeton extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel7)
-                        .addComponent(campo_idNumEstacionamiento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(campo_placas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addGap(13, 13, 13)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(campo_fechaImpresion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel9)
-                    .addComponent(jLabel10)
-                    .addComponent(campo_fechaVencimiento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel15)
-                    .addComponent(campo_estado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(campo_idNumEstacionamiento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel8)
+                        .addComponent(campo_placas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(13, 13, 13)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel9)
+                            .addComponent(campo_fechaImpresion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel15)
+                            .addComponent(campo_estado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(campo_fechaVencimiento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel10)))))
         );
 
         jLabel17.setText("Datos de la vivienda");
