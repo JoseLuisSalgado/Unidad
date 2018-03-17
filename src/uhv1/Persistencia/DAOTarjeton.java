@@ -6,6 +6,7 @@ import java.sql.Statement;
 import java.time.LocalDate;
 import java.util.Calendar;
 import uhv1.Negocio.Casa;
+import uhv1.Negocio.ControlAltaTarjeton;
 import uhv1.Negocio.Responsable;
 
 public class DAOTarjeton {
@@ -16,15 +17,18 @@ public class DAOTarjeton {
         Calendar cal = Calendar.getInstance();//intsancia para sumar un mes a la fecha actual
         cal.add(Calendar.MONTH, 1);//suma un mes
         java.sql.Date fechaVencimiento = new java.sql.Date(cal.getTimeInMillis());//cast para Date de sql
-        System.out.println(fechaActual);
-        System.out.println(fechaVencimiento);
+        //System.out.println(fechaActual);
+        //System.out.println(fechaVencimiento);
+        ControlAltaTarjeton cat = new ControlAltaTarjeton();//Instancia para regresar avisos 
         try {
             String insertaSQL = "Insert INTO tarjeton(Habitantes_idHabitante, placas, fecha_impresion, fecha_vencimiento, estado) VALUES ("+hab.getId()+", '"+ plac +"', '" +fechaActual+"', '" +fechaVencimiento+"', 'Activo')";
             Statement statement = ManejadorBD.dameConnection().createStatement();
             statement.execute(insertaSQL);
             System.out.println("Se ha agregado Tarjetón correctamente");
+            cat.recibeExitoDAO(true);
         
         } catch (SQLException e) {
+           cat.recibeExitoDAO(false);
            e.printStackTrace();
         }
     }

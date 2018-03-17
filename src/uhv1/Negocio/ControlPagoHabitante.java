@@ -2,8 +2,6 @@ package uhv1.Negocio;
 
 import uhv1.Persistencia.DAOPagoHabitante;
 import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import uhv1.ControlPrincipal;
 
 public class ControlPagoHabitante{
