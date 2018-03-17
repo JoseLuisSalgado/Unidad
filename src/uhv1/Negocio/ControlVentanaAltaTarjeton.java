@@ -17,6 +17,13 @@ public class ControlVentanaAltaTarjeton {
     
 
     public ControlVentanaAltaTarjeton(Responsable hab){
+        if(hab.getSaldo()>80){
+            JOptionPane.showMessageDialog(null, "Aviso: Este habitante cuenta con retrasos de cuota de \nmantenimiento por lo que no es posible asignar nuevo tarjetón.", "Aviso:",JOptionPane.INFORMATION_MESSAGE);
+            ControlPrincipal cp = new ControlPrincipal();
+            cp.inicia();
+        }else{
+            
+            
         java.awt.EventQueue.invokeLater(() -> {
             try {
                 new VentanaAltaTarjeton(hab).setVisible(true);
@@ -24,6 +31,7 @@ public class ControlVentanaAltaTarjeton {
                 Logger.getLogger(ControlVentanaAltaTarjeton.class.getName()).log(Level.SEVERE, null, ex);
             }
         });
+        }
     }
     public void recibeDatosFormulario(Responsable hab, String plac) throws SQLException{
         ControlAltaTarjeton cat = new ControlAltaTarjeton();

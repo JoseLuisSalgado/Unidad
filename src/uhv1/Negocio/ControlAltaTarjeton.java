@@ -24,8 +24,8 @@ public class ControlAltaTarjeton {
     }
     
     public static void main(String[] args) {
-        Casa cas = new Casa(1, "D", 45);
-        Responsable res = new Responsable(1, "Eleazar", "Morales", "Gadrduño", 1225623, cas, 40);
+        Casa cas = new Casa(1, "D", 105);
+        Responsable res = new Responsable(1, "Eleazar", "Morales", "Gadrduño", 1225623, cas, 140);
         ControlAltaTarjeton cat = new ControlAltaTarjeton(res);
     }
 }
