@@ -16,7 +16,7 @@ public class ControlVentanaAltaTarjeton {
     }
     
 
-    public ControlVentanaAltaTarjeton(Responsable hab){
+    public void creaVentanaAltaTarjeton(Responsable hab){
         if(hab.getSaldo()>80){
             JOptionPane.showMessageDialog(null, "Aviso: Este habitante cuenta con retrasos de cuota de \nmantenimiento por lo que no es posible asignar nuevo tarjetón.", "Aviso:",JOptionPane.INFORMATION_MESSAGE);
             ControlPrincipal cp = new ControlPrincipal();
