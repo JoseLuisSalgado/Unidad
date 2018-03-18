@@ -16,7 +16,7 @@ import uhv1.Persistencia.ManejadorBD;
  */
 public class DAOEvento {
 
-    public Evento buscaEvento(String nombreEvento) {
+    public Evento buscaEvento(String nombre) {
 
         String nomE;
         Date fechaR;
@@ -28,13 +28,13 @@ public class DAOEvento {
 
         try {
             Statement statement = ManejadorBD.dameConnection().createStatement();
-            ResultSet rs = statement.executeQuery("SELECT * FROM Eventos WHERE nombre = '" + nombreEvento + "';");
+            ResultSet rs = statement.executeQuery("SELECT * FROM Eventos WHERE nombre = '" + nombre + "';");
             /*se pone el apuntador una fila depues para guardar los datos recibidos*/
             rs.next();
             /* Se guardan los datos del evento recibidos en las variables correspondientes*/
 
             id = rs.getInt("idEvento");
-            nomE = rs.getString("nombreEvento");
+            nomE = rs.getString("nombre");
             fechaR = rs.getDate("fechaReservacion");
             descripcion = rs.getString("descripcion");
             saldo = rs.getFloat("saldo");

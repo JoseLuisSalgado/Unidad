@@ -11,13 +11,13 @@ import uhv1.Negocio.ControlBuscaEvento;
  *
  * @author Vianey
  */
-public class VentanaNotFoundEvento extends javax.swing.JFrame {
+public class VentanaNoEncontreEvento extends javax.swing.JFrame {
 
     /**
-     * Creates new form VentanaNotFoundEvento
+     * Creates new form VentanaNoEncontreEvento
      */
     ControlBuscaEvento controlevento;
-    public VentanaNotFoundEvento(ControlBuscaEvento controlevento) {
+    public VentanaNoEncontreEvento(ControlBuscaEvento controlevento) {
         this.controlevento = controlevento;
         initComponents();
     }

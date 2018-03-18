@@ -14,8 +14,8 @@ public class ControlVentanaEvento {
     DAOHabitantes daohabitante;
 
     public ControlVentanaEvento() {
-        this.daoeventos = daoeventos;
-        this.daohabitante = daohabitante;
+        this.daoeventos = new DAOEvento();
+        this.daohabitante = new DAOHabitantes();
     }
     public void inicia(){
        
