@@ -50,7 +50,7 @@ public class ControlBuscaEvento {
     /*Este metodo recibe un mensaje de Ventana no encontrado para regresar a la ventana evento, 
      ya que no se encontro un evento con los datos dados */
     public void regresaVentEvento() {
-        ControlVentanaEvento CVH = new ControlVentanaEvento();
-        CVH.inicia();
+        ControlVentanaEvento CVE = new ControlVentanaEvento();
+        CVE.inicia();
     }
 }

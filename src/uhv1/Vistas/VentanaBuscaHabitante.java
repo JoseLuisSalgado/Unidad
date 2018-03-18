@@ -59,6 +59,11 @@ public class VentanaBuscaHabitante extends javax.swing.JFrame {
         jLabel2.setText("ApellidoPaterno:");
 
         botonCancelar.setText("Cancelar");
+        botonCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonCancelarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -116,6 +121,10 @@ public class VentanaBuscaHabitante extends javax.swing.JFrame {
         String aPat = textoApat.getText();
         control.buscaH(nombre, aPat);
     }//GEN-LAST:event_botonBuscarActionPerformed
+
+    private void botonCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCancelarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonCancelarActionPerformed
 
     /**
      * @param args the command line arguments
