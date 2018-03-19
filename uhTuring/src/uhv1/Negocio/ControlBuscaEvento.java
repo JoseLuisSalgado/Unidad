@@ -30,7 +30,7 @@ public class ControlBuscaEvento {
     
     public void buscaEvento(String nombre) {
         Evento even;
-        
+        daoeven = new DAOEvento();
         System.out.println("-"+nombre+"metodo-------------");
         /* Se envia mensaje al dao evento con los datos del evento a buscar */
         even = daoeven.buscaEvento(nombre);
