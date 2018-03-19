@@ -29,5 +29,5 @@ public class ControlGestionEvento {
      public void botonCancelar(){
          ControlPrincipal ctrlPrincipal = new ControlPrincipal();
          ctrlPrincipal.inicia();
-     }
+     } 
 }

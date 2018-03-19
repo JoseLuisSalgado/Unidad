@@ -8,6 +8,7 @@ import java.sql.Statement;
 import uhv1.Negocio.Casa;
 import uhv1.Negocio.Evento;
 import uhv1.Negocio.Responsable;
+import uhv1.Persistencia.ManejadorBD;
 
 /**
  *
@@ -81,6 +82,26 @@ public class DAOEvento {
             return false;
         }else{
             return true;
+        }
+    }
+    
+    public boolean registra_evento(Evento eve){
+        int llave;
+        try {
+            // Crea el statement
+            Statement statement = uhv1.Persistencia.ManejadorBD.dameConnection().createStatement();
+            // Envia instruccion SQL, nota el DEFAULT es para insertar la llave autogenerada            
+            statement.execute("INSERT into Evento (Habitantes_idHabitante, nombre_evento, descripcion, fecha_reservacion, saldo, estado) values (" + eve.getHabitante().getId() + ", '" + eve.getNombre()+ "', '" + eve.getDescripcion() + "' , '" + eve.getFechaReservacion()+ "', " + eve.getSaldo() + ", " + eve.getEstado() +  ");", Statement.RETURN_GENERATED_KEYS);
+            ResultSet rs = statement.getGeneratedKeys(); // Recupera la llave
+
+            if (rs != null && rs.next()) {
+                llave = rs.getInt(1);
+                System.out.println("Id: " + llave);
+                eve.setId(llave);
+            }
+            return true;
+        } catch (SQLException e) {
+            return false;
         }
     }
 }

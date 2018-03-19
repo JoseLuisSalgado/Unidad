@@ -14,6 +14,7 @@ public class Evento {
     private float saldo;
     private Responsable habitante;
     private int id;
+    private int estado;
 
     public Evento(int id,String nombre, Date fechaReservacion, String descripcion, float saldo, Responsable habitante) {
         this.id=id;
@@ -22,6 +23,15 @@ public class Evento {
         this.descripcion = descripcion;
         this.saldo = saldo;
         this.habitante = habitante;
+    }
+
+    Evento(String nombre, Date fechaReservacion, float saldo, String descripcion, Responsable habitante, int estado) {
+       this.nombre = nombre;
+        this.fechaReservacion = fechaReservacion;
+        this.descripcion = descripcion;
+        this.saldo = saldo;
+        this.habitante = habitante;
+        this.estado =estado;
     }
 
     public String getNombre() {
@@ -73,6 +83,9 @@ public class Evento {
             return false;
         }
     }
+    public void setId(int id) {
+        this.id = id;
+    }
     
     public int getId(){
         return id;
@@ -81,5 +94,13 @@ public class Evento {
     @Override
     public String toString() {
         return "Eventos{" + "nombre=" + nombre + ", fechaReservacion=" + fechaReservacion + ", descripcion=" + descripcion + ", saldo=" + saldo + ", habitante=" + habitante + '}';
+    }
+    
+    public void setEstado(int estado) {
+        this.estado = estado;
+    }
+    
+    public int getEstado(){
+        return estado;
     }
 }

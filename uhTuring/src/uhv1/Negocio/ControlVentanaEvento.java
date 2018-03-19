@@ -19,8 +19,13 @@ public class ControlVentanaEvento {
     }
     public void inicia(){
         ControlBuscaEvento busca_evento = new ControlBuscaEvento(daoeventos);
-        VentanaEventos VE = new VentanaEventos(busca_evento);
+        VentanaEventos VE = new VentanaEventos(busca_evento,this);
         VE.setVisible(true);
     }
     
+    public void altaEvento(VentanaEventos ve){
+        ve.dispose();
+        ControlVentanaAltaEvento cvae = new ControlVentanaAltaEvento();
+        cvae.inicia();
+    }   
 }
