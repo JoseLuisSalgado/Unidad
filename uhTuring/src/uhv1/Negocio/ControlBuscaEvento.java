@@ -3,10 +3,12 @@ package uhv1.Negocio;
 
 import uhv1.Persistencia.DAOEvento;
 import uhv1.Vistas.VentanaBuscaEvento;
+import uhv1.Vistas.VentanaNoEncontrado;
+import uhv1.Vistas.VentanaNoEncontreEvento;
 
 /**
  *
- * @author Jose Luis
+ * @author Vianey
  */
 public class ControlBuscaEvento {
     
@@ -28,15 +30,17 @@ public class ControlBuscaEvento {
     
     public void buscaEvento(String nombre) {
         Evento even;
+        
+        System.out.println("-"+nombre+"metodo-------------");
         /* Se envia mensaje al dao evento con los datos del evento a buscar */
         even = daoeven.buscaEvento(nombre);
         if (even == null) {
             /*Si no se encontro el evento buscado, se envia mensaje a la ventana no encontrado, para
              desplegar una alerta */
-            // VentanaNoEncontrado vent = new VentanaNoEncontrado(this);
-            //vent.setVisible(true);
+            VentanaNoEncontreEvento ventne = new VentanaNoEncontreEvento(this);
+            ventne.setVisible(true);
         } else {
-            System.out.println(even.getNombre() + even.getDescripcion() + even.getFechaReservacion());
+              System.out.println(even.getNombre() + even.getDescripcion() + even.getFechaReservacion());
             /* Se encontro el evento, y se crea una instancia de control gestion
              evento con el evento encontrado*/
             ControlGestionEvento controlgestiona = new ControlGestionEvento(even, daoeven);
@@ -48,7 +52,7 @@ public class ControlBuscaEvento {
     /*Este metodo recibe un mensaje de Ventana no encontrado para regresar a la ventana evento, 
      ya que no se encontro un evento con los datos dados */
     public void regresaVentEvento() {
-        ControlVentanaEvento CVH = new ControlVentanaEvento();
-        CVH.inicia();
+        ControlVentanaEvento CVE = new ControlVentanaEvento();
+        CVE.inicia();
     }
 }
