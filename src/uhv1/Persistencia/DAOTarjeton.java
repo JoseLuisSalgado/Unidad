@@ -37,10 +37,10 @@ public class DAOTarjeton {
         String fecha_impre;
         String fecha_venci;
         String estado;
-        System.out.println("Está en busca Tarjeton ");
+        //System.out.println("Está en busca Tarjeton ");
         try{
             Statement statement = ManejadorBD.dameConnection().createStatement();
-            ResultSet rs = statement.executeQuery("SELECT * Tarjeton WHERE Habitantes_idHabitante= '"+id +"';");
+            ResultSet rs = statement.executeQuery("SELECT * FROM Tarjeton WHERE Habitantes_idHabitante= '"+id +"';");
             rs.next();
             num_esta=rs.getInt("num_estacionamiento");
             placas=rs.getString("placas");
@@ -53,7 +53,7 @@ public class DAOTarjeton {
             rs.close();
             return tarje;
         }catch(SQLException e){
-            System.out.println("Hubo un error 1");
+            System.out.println("Hubo un error 3");
             e.printStackTrace();
             return null;
         }
@@ -66,8 +66,20 @@ public class DAOTarjeton {
         int ca;
         float saldo;
         int id;
-        System.out.println("Está en busca Habitante ");
+        //System.out.println("Está en busca Habitante ");
         try {
+            /*
+            String consulta = "SELECT 
+            t.id_tarifa_t, r.ciudad_origen,
+            r.ciudad_destino, s.descripcion_s , 
+            t.hora_salida,
+            t.costo_pasaje FROM  tarifa t , ruta10 r,   servicio s WHERE t.id_servicio = s.id_servicio AND t.id_ruta = r.id_ruta";
+            */
+            
+            /*
+            
+            SELECT res.id
+            */
             Statement statement = ManejadorBD.dameConnection().createStatement();
             ResultSet rs = statement.executeQuery("SELECT * FROM Habitantes WHERE nombre = '" + nombre + "' AND aPat= '" + aPat + "';");
             /*se pone el apuntador una fila depues para guardar los datos recibidos*/

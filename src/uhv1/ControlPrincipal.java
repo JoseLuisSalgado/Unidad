@@ -31,6 +31,7 @@ public class ControlPrincipal {
     public ControlPrincipal(){
         daoTarjeton= new DAOTarjeton();
     }
+    
     public void inicia(){
         System.out.println("La aplicacion ha iniciado...");
         VentanaPrincipal ventanaP = new VentanaPrincipal(this);
@@ -49,6 +50,7 @@ public class ControlPrincipal {
     }
     
     public void controlTarjeton(){
+        //System.out.println("Estamos en control tarjeton ");
         ControlVentanaTarjeton CVT = new ControlVentanaTarjeton(daoTarjeton);
         CVT.inicia();
     }

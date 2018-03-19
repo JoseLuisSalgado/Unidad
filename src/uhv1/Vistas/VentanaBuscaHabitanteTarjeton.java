@@ -6,7 +6,6 @@
 package uhv1.Vistas;
 
 
-import uhv1.Negocio.ControlBuscaHabitanteTarjeton;
 import uhv1.Negocio.ControlVentanaTarjeton;
 /**
  *
@@ -63,6 +62,11 @@ public class VentanaBuscaHabitanteTarjeton extends javax.swing.JFrame {
         });
 
         jButtonCancelar.setText("Cancelar");
+        jButtonCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCancelarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -127,6 +131,12 @@ public class VentanaBuscaHabitanteTarjeton extends javax.swing.JFrame {
        
        //control.buscaH(nombre, aPat);
     }//GEN-LAST:event_botonBuscarActionPerformed
+
+    private void jButtonCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCancelarActionPerformed
+        // TODO add your handling code here:
+        control.botonCancela();
+        setVisible(false);
+    }//GEN-LAST:event_jButtonCancelarActionPerformed
 
   
     // Variables declaration - do not modify//GEN-BEGIN:variables

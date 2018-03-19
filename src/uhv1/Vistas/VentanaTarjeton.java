@@ -72,7 +72,7 @@ public class VentanaTarjeton extends javax.swing.JFrame {
         jLabelCasa.setText("Casa: "+ res.getCasa().getSeccion()+ "-" + res.getCasa().getNumero());
         jLabelCasa.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
-        jLabelTarjeton.setText("Tarjeton: "+ tarje.getNum_estacionamiento()+ tarje.getEstado());
+        jLabelTarjeton.setText("Tarjeton: "+ tarje.getNum_estacionamiento()+ " "+tarje.getEstado());
         jLabelTarjeton.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -92,10 +92,8 @@ public class VentanaTarjeton extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabelCasa)
-                        .addGap(78, 78, 78)
-                        .addComponent(jLabelTarjeton))
+                    .addComponent(jLabelTarjeton)
+                    .addComponent(jLabelCasa)
                     .addComponent(jLabelNombreH, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -107,10 +105,10 @@ public class VentanaTarjeton extends javax.swing.JFrame {
                 .addGap(30, 30, 30)
                 .addComponent(jLabelNombreH)
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabelCasa)
-                    .addComponent(jLabelTarjeton))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
+                .addComponent(jLabelCasa)
+                .addGap(18, 18, 18)
+                .addComponent(jLabelTarjeton)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jButtonBaja))

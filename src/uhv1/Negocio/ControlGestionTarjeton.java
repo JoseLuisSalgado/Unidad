@@ -26,7 +26,7 @@ public class ControlGestionTarjeton {
     }
     
     public void incicia(){
-        
+        //System.out.println("Estás en inicia de control gestion tarjeton ");
         VentanaTarjeton ventHab= new VentanaTarjeton(this,res,ton);
         ventHab.setVisible(true);
     }
