@@ -8,6 +8,7 @@ package uhv1;
 import uhv1.Negocio.ControlVentanaEventos;
 import uhv1.Negocio.ControlVentanaHabitante;
 import uhv1.Negocio.ControlVentanaTarjeton;
+import uhv1.Persistencia.DAOTarjeton;
 import uhv1.Vistas.VentanaPrincipal;
 import uhv1.Persistencia.ManejadorBD;
 
@@ -20,11 +21,16 @@ public class ControlPrincipal {
     /**
      * @param args the command line arguments
      */
+    
+    private DAOTarjeton daoTarjeton;
     public static void main(String[] args) {      
 	ControlPrincipal app = new ControlPrincipal(); // Crea la instancia de la aplicacion
 	app.inicia(); // Inicia la aplicacion
     }
     
+    public ControlPrincipal(){
+        daoTarjeton= new DAOTarjeton();
+    }
     public void inicia(){
         System.out.println("La aplicacion ha iniciado...");
         VentanaPrincipal ventanaP = new VentanaPrincipal(this);
@@ -43,7 +49,7 @@ public class ControlPrincipal {
     }
     
     public void controlTarjeton(){
-        ControlVentanaTarjeton CVT = new ControlVentanaTarjeton();
+        ControlVentanaTarjeton CVT = new ControlVentanaTarjeton(daoTarjeton);
         CVT.inicia();
     }
     

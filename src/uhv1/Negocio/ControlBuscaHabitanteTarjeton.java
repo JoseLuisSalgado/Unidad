@@ -5,57 +5,50 @@
  */
 package uhv1.Negocio;
 
-import java.sql.Date;
-import uhv1.Persistencia.DAOHabitantes;
 import uhv1.Persistencia.DAOTarjeton;
-import uhv1.Vistas.VentanaBuscaHabitanteTarjeton;
-import uhv1.Vistas.VentanaTarjeton;
 
 /**
  *
- * @author darky
+ * @author adrianags 
  */
-public class ControlVentanaTarjeton {
+public class ControlBuscaHabitanteTarjeton {
+     DAOTarjeton daores;
     
+    /* Este es el constructor que recibe el dao habitantes */
+    public ControlBuscaHabitanteTarjeton(DAOTarjeton daores){
+         this.daores = daores;
+    }
     
-    Responsable res;
-    DAOHabitantes daohab;
-    DAOTarjeton daotar;
-    Tarjeton tarje; 
-    public ControlVentanaTarjeton(DAOTarjeton daotar){
-       this.res = res;
-        this.daotar = daotar;
-    }
-    public void inicia(){
-       VentanaBuscaHabitanteTarjeton VT = new VentanaBuscaHabitanteTarjeton(this);
-        VT.setVisible(true);
-    }
+    /* Este metodo recibe mensaje de control ventana habitante y despliega la ventana busca habitante*/
+   
+    
     
     public void buscaH(String nombre, String aPat){
         Responsable res;
         /* Se envia mensaje al dao habitante con los datos del habitante a buscar */
-        res = daotar.buscaHabitante(nombre, aPat);
-        if(res == null){
+        res = daores.buscaHabitante(nombre, aPat);
+        int id=res.getId();
+        System.out.println("res id: "+ id);
+        Tarjeton tar;
+        tar= daores.buscaTarjeton(id);
+        if(res == null || tar==null){
             /*Si no se encontro el habitante buscado, se envia mensaje a la ventana no encontrado, para
             desplegar una alerta */
             //VentanaNoEncontrado vent = new VentanaNoEncontrado(this);
             //vent.setVisible(true);
+            System.out.println("NO SE ENCONTRO ");
         }else{
-            System.out.println(res.getNombre() + res.getaPat() + res.getaMat() );
+            if(res.getId()== tar.getId()){
+            System.out.println("holi "+res.getNombre() + res.getaPat() + res.getaMat()+ tar.getNum_estacionamiento() );
+                System.out.println("Tarjeton "+tar.toString());
             /* Se encontro el habitante, y se crea una instancia de control gestion
             habitante con el habitante encontrado y el dao responsable, y lo inicia*/
-            ControlGestionTarjeton controlges = new ControlGestionTarjeton(res,daotar, tarje);
+            ControlGestionTarjeton controlges = new ControlGestionTarjeton(res,daores,tar);
             controlges.incicia();
            // ControlGestionHabitante controlgestiona = new ControlGestionHabitante(res, daores);
            // controlgestiona.inicia();
+            }
         }
         
-    }
-    
-    public void bajaTarjeton(){
-        Date fechaimpre;
-        //Tarjeton tar = new (2, 134,"23A89", , 2018-08-29, "Activo");
-        ControlBajaTarjeton control1 = new ControlBajaTarjeton(daotar, res, tarje);
-        control1.inicia();
     }
 }

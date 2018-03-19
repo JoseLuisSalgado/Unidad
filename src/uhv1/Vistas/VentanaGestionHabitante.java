@@ -88,6 +88,7 @@ public class VentanaGestionHabitante extends javax.swing.JFrame {
 
         nombreH.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         nombreH.setText("Nombre: " + res.getNombre() + " " + res.getaPat() + " " + res.getaMat());
+        nombreH.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         jLabel2.setText("Saldo: " + res.getSaldo() );
 

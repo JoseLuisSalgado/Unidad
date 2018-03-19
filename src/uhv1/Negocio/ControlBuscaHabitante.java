@@ -40,6 +40,7 @@ public class ControlBuscaHabitante {
             VentanaNoEncontrado vent = new VentanaNoEncontrado(this);
             vent.setVisible(true);
         }else{
+            System.out.println("Hola");
             System.out.println(res.getNombre() + res.getaPat() + res.getaMat() );
             /* Se encontro el habitante, y se crea una instancia de control gestion
             habitante con el habitante encontrado y el dao responsable, y lo inicia*/
@@ -49,6 +50,7 @@ public class ControlBuscaHabitante {
         
     }
     
+     
     /*Este metodo recibe un mensaje de Ventana no encontrado para regresar a la ventana habitante, 
     ya que no se encontro un habitante con los datos dados */
     public void regresaVentHabitante(){

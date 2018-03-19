@@ -5,6 +5,10 @@
  */
 package uhv1.Vistas;
 
+import uhv1.Negocio.ControlGestionTarjeton;
+import uhv1.Negocio.Responsable;
+import uhv1.Negocio.Tarjeton;
+
 /**
  *
  * @author darky
@@ -14,7 +18,14 @@ public class VentanaTarjeton extends javax.swing.JFrame {
     /**
      * Creates new form VentanaTarjeton
      */
-    public VentanaTarjeton() {
+    ControlGestionTarjeton control;
+    Responsable res;
+    Tarjeton tarje;
+    public VentanaTarjeton(ControlGestionTarjeton  control, Responsable res, Tarjeton tarje) {
+        
+        this.control=control;
+        this.res=res;
+        this.tarje=tarje;
         initComponents();
     }
 
@@ -28,67 +39,108 @@ public class VentanaTarjeton extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jButtonBaja = new javax.swing.JButton();
+        jLabelNombreH = new javax.swing.JLabel();
+        jLabelCasa = new javax.swing.JLabel();
+        jLabelTarjeton = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        addHierarchyBoundsListener(new java.awt.event.HierarchyBoundsListener() {
+            public void ancestorMoved(java.awt.event.HierarchyEvent evt) {
+                formAncestorMoved(evt);
+            }
+            public void ancestorResized(java.awt.event.HierarchyEvent evt) {
+            }
+        });
 
-        jLabel1.setText("VentanaTarjeton");
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel1.setText("Ventana Tarjeton");
+
+        jButton1.setText("Alta ");
+
+        jButtonBaja.setText("Baja");
+        jButtonBaja.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonBajaActionPerformed(evt);
+            }
+        });
+
+        jLabelNombreH.setText("Nombre: " + res.getNombre()+ " " + res.getaPat() + " " + res.getaMat());
+        jLabelNombreH.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+
+        jLabelCasa.setText("Casa: "+ res.getCasa().getSeccion()+ "-" + res.getCasa().getNumero());
+        jLabelCasa.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+
+        jLabelTarjeton.setText("Tarjeton: "+ tarje.getNum_estacionamiento()+ tarje.getEstado());
+        jLabelTarjeton.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(166, 166, 166)
+                .addGap(85, 85, 85)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 101, Short.MAX_VALUE)
+                .addComponent(jButtonBaja)
+                .addGap(99, 99, 99))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(139, 139, 139)
                 .addComponent(jLabel1)
-                .addContainerGap(153, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabelCasa)
+                        .addGap(78, 78, 78)
+                        .addComponent(jLabelTarjeton))
+                    .addComponent(jLabelNombreH, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(34, 34, 34)
+                .addGap(44, 44, 44)
                 .addComponent(jLabel1)
-                .addContainerGap(252, Short.MAX_VALUE))
+                .addGap(30, 30, 30)
+                .addComponent(jLabelNombreH)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelCasa)
+                    .addComponent(jLabelTarjeton))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton1)
+                    .addComponent(jButtonBaja))
+                .addGap(91, 91, 91))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(VentanaTarjeton.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(VentanaTarjeton.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(VentanaTarjeton.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(VentanaTarjeton.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
+    private void jButtonBajaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBajaActionPerformed
+        // TODO add your handling code here: 
+     
+      dispose(); 
+      control.bajaPulsado();
+      setVisible(false);
+      
+      
+    }//GEN-LAST:event_jButtonBajaActionPerformed
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new VentanaTarjeton().setVisible(true);
-            }
-        });
-    }
+    private void formAncestorMoved(java.awt.event.HierarchyEvent evt) {//GEN-FIRST:event_formAncestorMoved
+        // TODO add your handling code here:
+    }//GEN-LAST:event_formAncestorMoved
 
+ 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButtonBaja;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabelCasa;
+    private javax.swing.JLabel jLabelNombreH;
+    private javax.swing.JLabel jLabelTarjeton;
     // End of variables declaration//GEN-END:variables
 }
