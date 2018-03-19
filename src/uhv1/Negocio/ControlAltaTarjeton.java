@@ -2,7 +2,7 @@
 package uhv1.Negocio;
 
 import java.sql.SQLException;
-import uhv1.Persistencia.DAOTarjeton;
+import uhv1.Persistencia.DAOAltaTarjeton;
 
 public class ControlAltaTarjeton {
     
@@ -15,7 +15,7 @@ public class ControlAltaTarjeton {
     }
     
     public void enviaDAOAltaTajeton(Responsable hab, String plac) throws SQLException{
-        DAOTarjeton daot = new DAOTarjeton();
+        DAOAltaTarjeton daot = new DAOAltaTarjeton();
         daot.insertaTarjeton(hab, plac);
     }
     
