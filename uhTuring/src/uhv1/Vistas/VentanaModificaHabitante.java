@@ -63,32 +63,33 @@ public class VentanaModificaHabitante extends javax.swing.JFrame {
 
         jLabelModiH.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabelModiH.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelModiH.setText("MODIFICA HABITANTE");
+        jLabelModiH.setText("Modifica Habitante");
 
-        jLabelNombre.setText("Nombre");
+        jLabelNombre.setText("Nombre:");
 
-        jLabelApat.setText("Apellido paterno");
+        jLabelApat.setText("Apellido paterno:");
 
-        jLabelAmat.setText("Apellido materno");
+        jLabelAmat.setText("Apellido materno:");
 
         jLabelTelefono.setText("Teléfono");
 
         jLabelCasa.setText("Casa");
 
+        jButtonAceptar.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jButtonAceptar.setText("Aceptar");
         jButtonAceptar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonAceptarActionPerformed(evt);
             }
         });
-
+         jButtonCancelar.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jButtonCancelar.setText("Cancelar");
         jButtonCancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonCancelarActionPerformed(evt);
             }
         });
-
+         jButtonDatos.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jButtonDatos.setText("Datos");
         jButtonDatos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

@@ -46,9 +46,9 @@ public class VentanaCancelaTarjeton extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(59, 59, 59)
+                .addGap(30, 30, 30)
                 .addComponent(jLabelCancelaTarjeton)
-                .addContainerGap(224, Short.MAX_VALUE))
+                .addContainerGap(253, Short.MAX_VALUE))
         );
 
         pack();

@@ -32,23 +32,24 @@ public class VentanaAltaTarjeton extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabelAltaTarjeton.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabelAltaTarjeton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelAltaTarjeton.setText("Alta tarjetón");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(154, 154, 154)
-                .addComponent(jLabelAltaTarjeton)
-                .addContainerGap(161, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabelAltaTarjeton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(51, 51, 51)
+                .addGap(30, 30, 30)
                 .addComponent(jLabelAltaTarjeton)
-                .addContainerGap(232, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();

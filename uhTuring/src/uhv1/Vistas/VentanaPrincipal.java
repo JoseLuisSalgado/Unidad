@@ -38,6 +38,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        botonHabitante.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         botonHabitante.setText("HABITANTE");
         botonHabitante.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -50,6 +51,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Unidad Habitacional v1.0");
 
+        botonEventos.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         botonEventos.setText("Eventos");
         botonEventos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -57,6 +59,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             }
         });
 
+        botonTarjeton.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         botonTarjeton.setText("Tarjeton");
         botonTarjeton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -64,7 +67,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             }
         });
 
+        botonAdministrar.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         botonAdministrar.setText("Administar");
+        botonAdministrar.setMaximumSize(new java.awt.Dimension(97, 23));
+        botonAdministrar.setMinimumSize(new java.awt.Dimension(97, 23));
+        botonAdministrar.setPreferredSize(new java.awt.Dimension(93, 23));
         botonAdministrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botonAdministrarActionPerformed(evt);
@@ -76,36 +83,34 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(129, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addGap(124, 124, 124))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(66, 66, 66)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(botonAdministrar)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(botonTarjeton))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(botonHabitante)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 147, Short.MAX_VALUE)
-                        .addComponent(botonEventos)))
-                .addGap(95, 95, 95))
+                .addGap(78, 78, 78)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(botonHabitante, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(botonAdministrar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(botonTarjeton, javax.swing.GroupLayout.DEFAULT_SIZE, 97, Short.MAX_VALUE)
+                    .addComponent(botonEventos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(78, 78, 78))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(46, 46, 46)
+                .addGap(30, 30, 30)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(49, 49, 49)
+                .addGap(60, 60, 60)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(botonHabitante)
                     .addComponent(botonEventos))
                 .addGap(57, 57, 57)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(botonTarjeton)
-                    .addComponent(botonAdministrar))
-                .addContainerGap(67, Short.MAX_VALUE))
+                    .addComponent(botonAdministrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(61, Short.MAX_VALUE))
         );
 
         pack();

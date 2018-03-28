@@ -29,7 +29,7 @@
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace max="32767" attributes="0"/>
               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="147" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
@@ -63,14 +63,14 @@
               <Component id="jLabelCasa" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="jTextFieldTarjetones" min="-2" pref="38" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="jButtonTarjetones" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jButtonAltaTarjeton" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jButtonCancelaTarjeton" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="40" max="32767" attributes="0"/>
+              <EmptySpace pref="43" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -81,13 +81,13 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Arial" size="14" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Habitante tarjet&#xf3;n"/>
+        <Property name="text" type="java.lang.String" value="Habitante Tarjet&#xf3;n"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="jButtonAltaTarjeton">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Arial" size="12" style="0"/>
+          <Font name="Arial" size="12" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Alta tarjet&#xf3;n"/>
       </Properties>
@@ -98,7 +98,7 @@
     <Component class="javax.swing.JButton" name="jButtonCancelaTarjeton">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Arial" size="12" style="0"/>
+          <Font name="Arial" size="12" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Cancelar tarjet&#xf3;n"/>
       </Properties>
@@ -154,7 +154,7 @@
     <Component class="javax.swing.JButton" name="jButtonTarjetones">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Arial" size="12" style="0"/>
+          <Font name="Arial" size="12" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Tarjetones"/>
       </Properties>

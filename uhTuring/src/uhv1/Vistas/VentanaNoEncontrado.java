@@ -36,9 +36,13 @@ public class VentanaNoEncontrado extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jLabel1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("NO SE ENCONTRO EL HABITANTE");
 
+        botonAceptar.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         botonAceptar.setText("Aceptar");
+        botonAceptar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         botonAceptar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botonAceptarActionPerformed(evt);
@@ -50,24 +54,25 @@ public class VentanaNoEncontrado extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(108, 108, 108)
-                        .addComponent(jLabel1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(157, 157, 157)
-                        .addComponent(botonAceptar)))
-                .addContainerGap(130, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(161, 161, 161)
+                .addComponent(botonAceptar)
+                .addContainerGap(161, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(121, 121, 121)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(55, 55, 55)
-                .addComponent(botonAceptar)
-                .addContainerGap(71, Short.MAX_VALUE))
+                .addGap(39, 39, 39)
+                .addComponent(botonAceptar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(87, 87, 87))
         );
+
+        botonAceptar.getAccessibleContext().setAccessibleParent(botonAceptar);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

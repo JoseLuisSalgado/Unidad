@@ -24,30 +24,30 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="131" max="-2" attributes="0"/>
-              <Component id="jLabel1" min="-2" pref="142" max="-2" attributes="0"/>
-              <EmptySpace pref="127" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jLabel1" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
           </Group>
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace max="32767" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="botonBusca" min="-2" max="-2" attributes="0"/>
-                  <Component id="botonAlta" min="-2" max="-2" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="150" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="botonBusca" max="32767" attributes="0"/>
+                  <Component id="botonAlta" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="135" max="-2" attributes="0"/>
+              <EmptySpace pref="150" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+              <EmptySpace pref="30" max="32767" attributes="0"/>
               <Component id="jLabel1" min="-2" pref="32" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
               <Component id="botonAlta" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
               <Component id="botonBusca" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="92" max="32767" attributes="0"/>
+              <EmptySpace pref="60" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -55,6 +55,9 @@
   <SubComponents>
     <Component class="javax.swing.JButton" name="botonAlta">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial" size="12" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Alta Habitante"/>
       </Properties>
       <Events>
@@ -63,6 +66,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="botonBusca">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial" size="12" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Busca Habitante"/>
       </Properties>
       <Events>

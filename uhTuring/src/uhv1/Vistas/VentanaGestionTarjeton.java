@@ -57,9 +57,9 @@ public class VentanaGestionTarjeton extends javax.swing.JFrame {
         });
 
         jLabel1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jLabel1.setText("Habitante tarjetón");
+        jLabel1.setText("Habitante Tarjetón");
 
-        jButtonAltaTarjeton.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jButtonAltaTarjeton.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jButtonAltaTarjeton.setText("Alta tarjetón");
         jButtonAltaTarjeton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -67,7 +67,7 @@ public class VentanaGestionTarjeton extends javax.swing.JFrame {
             }
         });
 
-        jButtonCancelaTarjeton.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jButtonCancelaTarjeton.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jButtonCancelaTarjeton.setText("Cancelar tarjetón");
         jButtonCancelaTarjeton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -93,7 +93,7 @@ public class VentanaGestionTarjeton extends javax.swing.JFrame {
             }
         });
 
-        jButtonTarjetones.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jButtonTarjetones.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jButtonTarjetones.setText("Tarjetones");
         jButtonTarjetones.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -108,7 +108,7 @@ public class VentanaGestionTarjeton extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel1)
-                .addGap(147, 147, 147))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGap(69, 69, 69)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -135,13 +135,13 @@ public class VentanaGestionTarjeton extends javax.swing.JFrame {
                 .addComponent(jLabelCasa)
                 .addGap(18, 18, 18)
                 .addComponent(jTextFieldTarjetones, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addComponent(jButtonTarjetones)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonAltaTarjeton)
                     .addComponent(jButtonCancelaTarjeton))
-                .addContainerGap(40, Short.MAX_VALUE))
+                .addContainerGap(43, Short.MAX_VALUE))
         );
 
         pack();
