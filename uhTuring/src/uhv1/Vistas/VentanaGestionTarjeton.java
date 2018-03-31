@@ -59,7 +59,7 @@ public class VentanaGestionTarjeton extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel1.setText("Habitante Tarjetón");
 
-        jButtonAltaTarjeton.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jButtonAltaTarjeton.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jButtonAltaTarjeton.setText("Alta tarjetón");
         jButtonAltaTarjeton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -67,7 +67,7 @@ public class VentanaGestionTarjeton extends javax.swing.JFrame {
             }
         });
 
-        jButtonCancelaTarjeton.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jButtonCancelaTarjeton.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jButtonCancelaTarjeton.setText("Cancelar tarjetón");
         jButtonCancelaTarjeton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -93,7 +93,7 @@ public class VentanaGestionTarjeton extends javax.swing.JFrame {
             }
         });
 
-        jButtonTarjetones.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jButtonTarjetones.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jButtonTarjetones.setText("Tarjetones");
         jButtonTarjetones.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

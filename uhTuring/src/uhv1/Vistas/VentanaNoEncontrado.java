@@ -40,7 +40,7 @@ public class VentanaNoEncontrado extends javax.swing.JFrame {
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("NO SE ENCONTRO EL HABITANTE");
 
-        botonAceptar.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        botonAceptar.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         botonAceptar.setText("Aceptar");
         botonAceptar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         botonAceptar.addActionListener(new java.awt.event.ActionListener() {
@@ -60,7 +60,7 @@ public class VentanaNoEncontrado extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(161, 161, 161)
                 .addComponent(botonAceptar)
-                .addContainerGap(161, Short.MAX_VALUE))
+                .addContainerGap(165, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

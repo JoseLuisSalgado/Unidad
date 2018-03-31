@@ -57,10 +57,15 @@ public class VentanaTarjeton extends javax.swing.JFrame {
 
         jTextField2Apat.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
 
-        jButtonCancelar.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jButtonCancelar.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jButtonCancelar.setText("Cancelar");
+        jButtonCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCancelarActionPerformed(evt);
+            }
+        });
 
-        jButtonAceptar.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jButtonAceptar.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jButtonAceptar.setText("Aceptar");
         jButtonAceptar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -128,6 +133,10 @@ public class VentanaTarjeton extends javax.swing.JFrame {
         
         
     }//GEN-LAST:event_jButtonAceptarActionPerformed
+
+    private void jButtonCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCancelarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonCancelarActionPerformed
 
   
 

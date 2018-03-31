@@ -33,7 +33,7 @@ public class VentanaBuscaEvento extends javax.swing.JFrame {
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Busca Evento");
 
-        jbuscarevento.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jbuscarevento.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jbuscarevento.setText("Buscar");
         jbuscarevento.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -41,8 +41,13 @@ public class VentanaBuscaEvento extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jButton2.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jButton2.setText("Cancelar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -94,6 +99,10 @@ public class VentanaBuscaEvento extends javax.swing.JFrame {
         dispose();
         ctrlBuscaEvento.regresaVentEvento();
     }//GEN-LAST:event_btnCancelarActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments

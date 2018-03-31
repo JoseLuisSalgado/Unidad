@@ -47,7 +47,7 @@ public class VentanaBuscaHabitante extends javax.swing.JFrame {
         botonBusca.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         botonBusca.setText("Busca Habitante");
 
-        botonBuscar.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        botonBuscar.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         botonBuscar.setText("Buscar");
         botonBuscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -61,7 +61,7 @@ public class VentanaBuscaHabitante extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jLabel2.setText("ApellidoPaterno:");
 
-        botonCancelar.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        botonCancelar.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         botonCancelar.setText("Cancelar");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

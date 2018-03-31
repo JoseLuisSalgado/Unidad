@@ -38,8 +38,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        botonHabitante.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        botonHabitante.setText("HABITANTE");
+        botonHabitante.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        botonHabitante.setText("Habitante");
         botonHabitante.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botonHabitanteActionPerformed(evt);
@@ -47,11 +47,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         });
 
         jLabel1.setBackground(new java.awt.Color(204, 204, 204));
-        jLabel1.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Unidad Habitacional v1.0");
 
-        botonEventos.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        botonEventos.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         botonEventos.setText("Eventos");
         botonEventos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -59,7 +59,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             }
         });
 
-        botonTarjeton.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        botonTarjeton.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         botonTarjeton.setText("Tarjeton");
         botonTarjeton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -67,7 +67,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             }
         });
 
-        botonAdministrar.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        botonAdministrar.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         botonAdministrar.setText("Administar");
         botonAdministrar.setMaximumSize(new java.awt.Dimension(97, 23));
         botonAdministrar.setMinimumSize(new java.awt.Dimension(97, 23));
@@ -83,14 +83,14 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(129, Short.MAX_VALUE)
+                .addContainerGap(125, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addGap(124, 124, 124))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(78, 78, 78)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(botonHabitante, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(botonAdministrar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(botonAdministrar, javax.swing.GroupLayout.DEFAULT_SIZE, 97, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(botonTarjeton, javax.swing.GroupLayout.DEFAULT_SIZE, 97, Short.MAX_VALUE)

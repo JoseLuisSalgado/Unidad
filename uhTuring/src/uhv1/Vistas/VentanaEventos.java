@@ -48,7 +48,7 @@ public class VentanaEventos extends javax.swing.JFrame {
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText(" Eventos");
 
-        Alta.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        Alta.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         Alta.setText("Alta Evento");
         Alta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -56,7 +56,7 @@ public class VentanaEventos extends javax.swing.JFrame {
             }
         });
 
-        Buscar.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        Buscar.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         Buscar.setText("Buscar Evento");
         Buscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -77,7 +77,7 @@ public class VentanaEventos extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(Buscar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(Alta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(150, Short.MAX_VALUE))
+                .addContainerGap(154, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

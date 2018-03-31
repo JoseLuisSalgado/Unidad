@@ -37,7 +37,7 @@ public class VentanaHabitante extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        botonAlta.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        botonAlta.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         botonAlta.setText("Alta Habitante");
         botonAlta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -45,7 +45,7 @@ public class VentanaHabitante extends javax.swing.JFrame {
             }
         });
 
-        botonBusca.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        botonBusca.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         botonBusca.setText("Busca Habitante");
         botonBusca.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -71,7 +71,7 @@ public class VentanaHabitante extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(botonBusca, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(botonAlta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(150, Short.MAX_VALUE))
+                .addContainerGap(152, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
